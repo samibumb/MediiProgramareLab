@@ -46,19 +46,19 @@
             </Canvas>
         </GroupBox>
         <TextBox x:Name="txtTotal" HorizontalAlignment="Left" Margin="461,337,0,0" Grid.Row="2" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Bold" IsReadOnly="True" Height="18"/>
-        <Menu x:Name="menuMiain" Margin="26,13,668,1" Grid.RowSpan="2" Opacity="0.9" Visibility="Visible">
+        <Menu x:Name="menuMain" Margin="26,13,668,1" Grid.RowSpan="2" Opacity="0.9" Visibility="Visible">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="Doughnuts">
                 <MenuItem Header="Make">
                     <MenuItem Header="Raised">
-                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
-                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                        <MenuItem x:Name="glazedMenuItem" Header="Glazed" Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarMenuItem" Header="Sugar" IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>/>
                     </MenuItem>
                     <MenuItem Header="Filled"/>
                 </MenuItem>
-                <MenuItem Header="Stop"/>
+                    <MenuItem x:Name="mnuStop" Header="Stop"/> 
             </MenuItem>
         </Menu>
 
